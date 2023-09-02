@@ -1,7 +1,24 @@
-#defining the lists of pokemons and atacks
-choices = ['charmander', 'squirtle', 'bulbasaur']
-skills = ['ember', 'watergun', 'razor leaf']
+#creating lists of region from pokemons
 
+regions = ['kanto','Jhoto','Hoen','Sinnoh','Unova']
+kantochoices = ['charmander', 'squirtle', 'bulbasaur']
+jhotochoices = ['cyndaquil','totodile','chicorita']
+hoenchoices = ['torchick','mudikip','treeko']
+sinnohchoices = ['chinchar','piplup','turtwig']
+
+#defining the lists of pokemons and atacks
+types = ['fire', 'water', 'grass']
+fireskills = ['ember', 'flamethrower', 'fire blast', 'fire punch', 'flame wheel', 'fire spin', 'heat wave', 'blast burn', 'fire fang', 'eruption']
+waterskills = ['watergun', 'surf', 'hydro pump', 'aqua tail', 'bubble beam', 'water pulse', 'scald', 'dive', 'aqua jet', 'brine']
+grassskills = ['razor leaf', 'solar beam', 'vine whip', 'bullet seed', 'leaf blade', 'energy ball', 'petal dance', 'giga drain', 'grass knot', 'seed bomb']
+
+#startin survey
+regionchoice = input("Please, tell where you wish to begin you journey? ")
+if regionchoice not in regions:
+    print ('We cant provide you any choice. can you tell me another regio? chose one of these{}'.format(regions))
+else:
+    print ('oh! great place')
+  
 pokemon = input("Please choose your initial pokemon: ")
 
 #validation
