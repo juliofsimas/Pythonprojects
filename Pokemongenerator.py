@@ -53,15 +53,15 @@ skills = []
 index = 1
 index = choices[index]
 
-if choices[index[0]] == 0:
-    type = 'fire'
-    skills = fireskills
-elif choices[index[0]] == 1:
-    type = 'water'
-    skills = waterskills
-elif choices[index[0]] == 2:
-    type = 'grass'
-    skills = grassskills
+if index[0] == 0:
+        type = 'fire'
+        skills = fireskills
+elif index[0] == 1:
+        type = 'water'
+        skills = waterskills
+elif index[0] == 2:
+        type = 'grass'
+        skills = grassskills
 else:
     print('Something is wrong!')
 
@@ -69,7 +69,7 @@ else:
 
 
 #validation
-    print('The pokemon you chose is a  {} one. It can learn k one of these moves below: {}'.format(type, skills))
+    print('You chose is a  {} one. It can learn these moves: {}.'.format(type, skills))
 
 Strenghten= []           
 
@@ -81,7 +81,7 @@ elif type == 'grass':
     Strenghten = ['Water','ground','rock']
 else:
     print('Something its wrong!')             
-            
+
 
 frase = "You choose very well! The {pokemon}, is a {type} pokemon. They easily learn the moves like {moves}, that is very efective against {Strenghten} ones".format(pokemon=pokemon, type=type, moves=moves, Strenghten=Strenghten)
 
