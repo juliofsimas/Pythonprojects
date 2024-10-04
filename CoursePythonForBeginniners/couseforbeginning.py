@@ -78,3 +78,21 @@ def display_info(title,country,salary):
 
 display_info(job_title,job_country,job_salary)
 
+class Jobpost:
+  def __init__(self, title, location, salary):
+    self.title = title
+    self.location = location
+    self.salary = salary
+  def display_info(self):
+      return print(f"job: {self.title}\ location : {self.country} \ salary: {self.salary}")
+
+Jobpost(job_title, job_country, job_salary)
+
+job = Jobpost(job_title, job_country, job_salary)
+
+job.salary
+
+job.location
+
+job.display_info
+
