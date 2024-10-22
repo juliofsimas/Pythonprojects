@@ -1,40 +1,54 @@
-
-
-
+# Definição da classe Pokemon (copie isso se ainda não tiver no seu código)
 class Pokemon:
     def __init__(self, name, pokemon_type, level=1):
-        # These are the attributes of each Pokémon
-        self.name = name           # The name of the Pokémon
-        self.pokemon_type = pokemon_type  # The type of the Pokémon (e.g., Fire, Water, Grass)
-        self.level = level         # The Pokémon's level (default is 1)
-        self.hp = level * 10       # The Pokémon's HP (Hit Points), based on level
+        self.name = name
+        self.pokemon_type = pokemon_type
+        self.level = level
+        self.hp = level * 10
 
-    # Method 1: Display Pokémon info
+    # Método para exibir informações do Pokémon
     def display_info(self):
         print(f"{self.name} is a {self.pokemon_type}-type Pokémon at level {self.level} with {self.hp} HP.")
 
-    # Method 2: Level up the Pokémon
+    # Método para subir de nível
     def level_up(self):
         self.level += 1
-        self.hp = self.level * 10  # Update HP as well when leveling up
+        self.hp = self.level * 10  # Atualiza os HP
         print(f"{self.name} leveled up to level {self.level}! HP is now {self.hp}.")
 
-    # Method 3: Attack another Pokémon
+    # Método para atacar outro Pokémon
     def attack(self, other_pokemon):
-        damage = self.level * 5    # Damage is based on the attacker's level
-        other_pokemon.hp -= damage  # The other Pokémon loses HP
+        damage = self.level * 5  # O dano é baseado no nível
+        other_pokemon.hp -= damage  # O outro Pokémon perde HP
         print(f"{self.name} attacks {other_pokemon.name} for {damage} damage!")
         if other_pokemon.hp <= 0:
             print(f"{other_pokemon.name} has fainted!")
         else:
             print(f"{other_pokemon.name} has {other_pokemon.hp} HP left.")
 
-Charmander = Pokemon('Charmander', 'Fire')
-Pikachu = Pokemon('Pikachu,'Eletric')
+# Testando os métodos
 
-Charmander.display_info
+# Criando dois Pokémon
+charmander = Pokemon("Charmander", "fire", level=5)
+squirtle = Pokemon("Squirtle", "water", level=4)
 
-Charmander.level_up
+# Exibindo informações dos Pokémon
+print("=== Informações Iniciais ===")
+charmander.display_info()
+squirtle.display_info()
 
-print(pikachu)
+# Charmander ataca Squirtle
+print("\n=== Batalha 1: Charmander ataca Squirtle ===")
+charmander.attack(squirtle)
 
+# Squirtle ataca de volta
+print("\n=== Batalha 2: Squirtle ataca Charmander ===")
+squirtle.attack(charmander)
+
+# Charmander sobe de nível
+print("\n=== Charmander sobe de nível ===")
+charmander.level_up()
+
+# Exibindo informações após o level up
+print("\n=== Informações após o level up ===")
+charmander.display_info()
