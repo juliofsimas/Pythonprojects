@@ -24,39 +24,39 @@ class Pokemon:
     #expected results
     #picachu leveld up to level 3! hp is now 30
 
-    # Método para atacar outro Pokémon
+    # Method to attack other pokemon
     def attack(self, other_pokemon):
-        damage = self.level * 5  # O dano é baseado no nível
-        other_pokemon.hp -= damage  # O outro Pokémon perde HP
+        damage = self.level * 5  # The damage is realative to your level
+        other_pokemon.hp -= damage  # The hp drew from the other pokemon
         print(f"{self.name} attacks {other_pokemon.name} for {damage} damage!")
         if other_pokemon.hp <= 0:
             print(f"{other_pokemon.name} has fainted!")
         else:
             print(f"{other_pokemon.name} has {other_pokemon.hp} HP left.")
 
-# Testando os métodos
+# Tests
 
-# Criando dois Pokémon
+# Creating pokemons
 charmander = Pokemon("Charmander", "fire", level=5)
 squirtle = Pokemon("Squirtle", "water", level=4)
 
-# Exibindo informações dos Pokémon
-print("=== Informações Iniciais ===")
+# Showing informations
+print("=== Initial informations ===")
 charmander.display_info()
 squirtle.display_info()
 
-# Charmander ataca Squirtle
-print("\n=== Batalha 1: Charmander ataca Squirtle ===")
+# Charmander hit Squirtle
+print("\n=== Battle 1: Charmander hit Squirtle ===")
 charmander.attack(squirtle)
 
-# Squirtle ataca de volta
-print("\n=== Batalha 2: Squirtle ataca Charmander ===")
+# Squirtle hit back
+print("\n=== Battle 2: Squirtle hit Charmander ===")
 squirtle.attack(charmander)
 
-# Charmander sobe de nível
-print("\n=== Charmander sobe de nível ===")
+# Charmander leveled up
+print("\n=== Charmander level up ===")
 charmander.level_up()
 
-# Exibindo informações após o level up
-print("\n=== Informações após o level up ===")
+# Showing information after level up
+print("\n=== Information after level up ===")
 charmander.display_info()
