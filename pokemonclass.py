@@ -15,11 +15,14 @@ class Pokemon:
     #pikachu.display_info()
     # Expected response = Pikachu is a Eletric Pokémon at Level 2 with 20 HP. 
 
-    # Método para subir de nível
+    # Method to level up your pokemon
     def level_up(self):
         self.level += 1
-        self.hp = self.level * 10  # Atualiza os HP
+        self.hp = self.level * 10  # update HP
         print(f"{self.name} leveled up to level {self.level}! HP is now {self.hp}.")
+
+    #expected results
+    #picachu leveld up to level 3! hp is now 30
 
     # Método para atacar outro Pokémon
     def attack(self, other_pokemon):
