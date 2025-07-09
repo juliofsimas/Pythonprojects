@@ -1,4 +1,4 @@
-# Definição da classe Pokemon (copie isso se ainda não tiver no seu código)
+# Stabilshing classes
 class Pokemon:
     def __init__(self, name, pokemon_type, level=1):
         self.name = name
@@ -6,9 +6,14 @@ class Pokemon:
         self.level = level
         self.hp = level * 10
 
-    # Método para exibir informações do Pokémon
+    # Method to display pokemon information
     def display_info(self):
         print(f"{self.name} is a {self.pokemon_type}-type Pokémon at level {self.level} with {self.hp} HP.")
+
+    # Exemple how to use this method
+    #pikachu = Pokemon("Pikachu", "Electric",level= 2)
+    #pikachu.display_info()
+    # Expected response = Pikachu is a Eletric Pokémon at Level 2 with 20 HP. 
 
     # Método para subir de nível
     def level_up(self):
